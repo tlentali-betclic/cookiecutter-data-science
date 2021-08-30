@@ -43,10 +43,10 @@ echo -n "Creating Github repository '$repo_name' ..."
 curl -u "$username:$token" https://api.github.com/user/repos -d '{"name":"'$repo_name'", "private":true}' > /dev/null 2>&1
 echo " done."
 
-echo "Pushing local code to remote ..."
-git init .
-git add .
-git commit -m "initial setup"
-git remote add origin git@github.com:$username/$repo_name.git > /dev/null 2>&1
-git push -u origin master > /dev/null 2>&1
-echo "Done!"
+# echo "Pushing local code to remote ..."
+# git init .
+# git add .
+# git commit -m "initial setup"
+# git remote add origin git@github.com:$username/$repo_name.git > /dev/null 2>&1
+# git push -u origin master > /dev/null 2>&1
+# echo "Done!"
