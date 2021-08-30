@@ -17,14 +17,20 @@ fi
 
 username=`git config github.user`
 if [ "$username" = "" ]; then
-    echo "Could not find username, run 'git config --global github.user <username>'"
-    invalid_credentials=1
+    echo "GitHub username?"
+    read username
+    if [ "$username" = "" ]; then
+      echo "Could not find username, run 'git config --global github.user <username>'"
+      invalid_credentials=1
 fi
 
 token=`git config github.token`
 if [ "$token" = "" ]; then
-    echo "Could not find token, run 'git config --global github.token <token>'"
-    invalid_credentials=1
+    echo "GitHub token?"
+    read token
+    if [ "$username" = "" ]; then
+      echo "Could not find token, run 'git config --global github.token <token>'"
+      invalid_credentials=1
 fi
 
 if [ "$invalid_credentials" == "1" ]; then
