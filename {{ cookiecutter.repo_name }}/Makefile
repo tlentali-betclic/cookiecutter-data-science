@@ -38,6 +38,18 @@ clean:
 lint:
 	flake8 src
 
+## Upload Data to default DVC remote
+push:
+	dvc push
+
+## Download Data from default DVC remote
+pull:
+	dvc pull
+
+## Reproduce the DVC pipeline - recompute any modified outputs such as processed data or trained models
+reproduce:
+	dvc repro eval.dvc
+
 ## Upload Data to S3
 sync_data_to_s3:
 ifeq (default,$(PROFILE))
