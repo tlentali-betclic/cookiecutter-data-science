@@ -22,6 +22,7 @@ if [ "$username" = "" ]; then
     if [ "$username" = "" ]; then
       echo "Could not find username, run 'git config --global github.user <username>'"
       invalid_credentials=1
+    fi
 fi
 
 token=`git config github.token`
@@ -31,6 +32,7 @@ if [ "$token" = "" ]; then
     if [ "$username" = "" ]; then
       echo "Could not find token, run 'git config --global github.token <token>'"
       invalid_credentials=1
+    fi
 fi
 
 if [ "$invalid_credentials" == "1" ]; then
