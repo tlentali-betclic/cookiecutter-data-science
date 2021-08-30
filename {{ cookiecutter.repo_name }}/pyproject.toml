@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "{{ cookiecutter.project_name }}"
+name = "{{ cookiecutter.repo_name }}"
 version = "0.0.1"
 description = "{{ cookiecutter.description }}"
 authors = ["{{ cookiecutter.author_name }}"]
@@ -17,9 +17,9 @@ license = "{{ license_classifiers[cookiecutter.open_source_license] }}"
 {%- endif %}
 readme = "README.md"
 keywords = ["{{ cookiecutter.project_name }}"]
-repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
 packages = [
-    { include = "{{cookiecutter.module_name}}", from = "src" },
+    { include = "{{cookiecutter.repo_name}}", from = "src" },
 ]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
@@ -36,8 +36,8 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues"
-"Source" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+"Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues"
+"Source" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
 # "Documentation" = "https://{{ cookiecutter.project_name }}.readthedocs.io"
 
 [tool.poetry.dependencies]
