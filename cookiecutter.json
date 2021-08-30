@@ -2,8 +2,11 @@
     "project_name": "project_name",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "Your name (or your organization/company/team)",
+    "email": "email",
     "description": "A short description of the project.",
     "open_source_license": ["MIT", "BSD-3-Clause", "No license file"],
     "aws_profile": "default",
+    "github_username": "github_username",
+    "github_token": "github_token",
     "python_interpreter": "python3"
 }
