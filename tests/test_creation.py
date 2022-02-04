@@ -100,7 +100,7 @@ class TestCookieSetup(object):
             'src/data',
             'src/features',
             'src/models',
-            'src/visualization',
+            'src/visualizations',
         ]
 
         ignored_dirs = [
