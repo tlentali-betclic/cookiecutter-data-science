@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "{{ cookiecutter.repo_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author_name }} {{ cookiecutter.email }}"]
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+
+[tool.poetry.dev-dependencies]
+{% if cookiecutter.data_version_control == "true" -%}fastds = "^0.6.0"{% endif %}
+{% if cookiecutter.doc_tool == "mkdocs" -%}mkdocs-material = "^8.1.9"{% endif %}
+{% if cookiecutter.data_quality_checker == "true" -%}great_expectations = "^0.14.5"{% endif %}
+pytest = "^7.0.0"
+jupyter = "^1.0.0"
+jupyterlab = "^3.2.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

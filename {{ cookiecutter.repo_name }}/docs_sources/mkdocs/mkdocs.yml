@@ -1,0 +1,14 @@
+site_name: {{cookiecutter.repo_name}}
+site_description: {{cookiecutter.description}}
+site_author: {{cookiecutter.author_name}}
+
+theme:
+  name: material
+  logo: betclic_logo.png
+  favicon: betclic_logo.png
+
+pages:
+  - Home: index.md
+
+repo_url: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}
+
