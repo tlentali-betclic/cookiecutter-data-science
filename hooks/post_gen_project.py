@@ -11,7 +11,7 @@ logger = logging.getLogger("post_gen_project")
 DOCS_SOURCES = "docs_sources"
 ALL_TEMP_FOLDERS = [DOCS_SOURCES]
 DOCS_FILES_BY_TOOL = {
-    "mkdocs": ["index.md", "/mkdocs.yml", "betclic_logo.png"],
+    "mkdocs": ["index.md", "/mkdocs.yml", "betclic_logo.png", "gen_ref_pages.py"],
     "sphinx": ["conf.py", "index.rst", "make.bat", "Makefile"],
 }
 TEMP_PATHS = [

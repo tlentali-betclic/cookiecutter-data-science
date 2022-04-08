@@ -7,10 +7,17 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.11"
+python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 {% if cookiecutter.data_version_control == "true" -%}fastds = "^0.6.0"{% endif %}
-{% if cookiecutter.doc_tool == "mkdocs" -%}mkdocs-material = "^8.1.9"{% endif %}
+{% if cookiecutter.doc_tool == "mkdocs" -%}mkdocs-material = "^8.1.9"
+mkdocstrings = "^0.18.0"
+mkdocs-gen-files = "^0.3.4"
+mkdocs-literate-nav = "^0.4.1"
+mkdocs-section-index = "^0.3.4"
+mkdocs-mermaid2-plugin = "^0.5.2"
+mkdocs-jupyter = "^0.20.1"{% endif %}
 {% if cookiecutter.data_quality_checker == "true" -%}great_expectations = "^0.14.5"{% endif %}
 pytest = "^7.0.0"
 jupyter = "^1.0.0"
