@@ -11,7 +11,8 @@ python-dotenv = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 {% if cookiecutter.data_version_control == "true" -%}fastds = "^0.6.0"{% endif %}
-{% if cookiecutter.doc_tool == "mkdocs" -%}mkdocs-material = "^8.1.9"
+{% if cookiecutter.doc_tool == "mkdocs" -%}
+mkdocs-material = "^8.1.9"
 mkdocstrings = "^0.18.0"
 mkdocs-gen-files = "^0.3.4"
 mkdocs-literate-nav = "^0.4.1"
